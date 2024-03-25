@@ -8,10 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@linaria/babel-preset": "^5.0.4",
     "@linaria/core": "^6.1.0",
     "@linaria/react": "^6.1.0",
-    "@linaria/vite": "^5.0.4",
     "jsxq": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -19,6 +17,8 @@
   "devDependencies": {
     "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.24.1",
+    "@linaria/babel-preset": "^5.0.4",
+    "@linaria/vite": "^5.0.4",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
