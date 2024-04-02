@@ -1,5 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -7,31 +7,31 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { createHead } from "remix-island";
 import styles from "./index.css?url";
+
+export const meta: MetaFunction = () => [{ title: "New Remix App" }];
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: styles },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
-}
+export const Head = createHead(() => (
+  <>
+    <Meta />
+    <Links />
+  </>
+));
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <>
+      <Head />
+      <Outlet />
+      <ScrollRestoration />
+      <Scripts />
+      {/* <LiveReload /> */}
+    </>
+  );
 }
