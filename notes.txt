@@ -3,3 +3,7 @@ Still remaining flicking problem after page load.
 
 remix-macaron-jsxq
 There is a hydration error in production build.
+
+remix-ecsstaic-jsxq
+There is flicking problem while page load.
+Sometimes hydration error occurs in production.
