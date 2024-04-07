@@ -14,5 +14,8 @@ works well
 remix-panda-jsxq
 works well
 
+remix-stylis-jsxq
+works well
+
 remix-vite-css-in-js-jsxq
 FOUC in dev
