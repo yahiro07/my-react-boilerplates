@@ -8,6 +8,12 @@ remix-emotion-jsxq
 FOUC in dev
 FOUC in prod
 
+remix-linaria-jsxq
+works well
+
+remix-kuma-jsxq
+FOUC in dev
+
 remix-macaron-jsxq
 works well
 
