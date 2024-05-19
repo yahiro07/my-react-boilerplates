@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "jsxImportSource": "jsxq",
+    "jsxImportSource": "@emotion/react",
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "paths": {

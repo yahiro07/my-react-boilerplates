@@ -1,9 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { Box } from "@mui/system";
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import { Box } from "@mui/material";
 import { FC } from "react";
 
 const VStack = Box;
+
+const RedBox = styled.div`
+  background: red;
+  width: 100px;
+  height: 100px;
+`;
 
 const Home: FC = () => {
   const active = true;
@@ -27,6 +35,14 @@ const Home: FC = () => {
       <Box width="200px" height="100px" border="solid 1px red" padding="20px">
         hello
       </Box>
+      <RedBox />
+      <div
+        css={css`
+          color: red;
+        `}
+      >
+        world
+      </div>
     </VStack>
   );
 };
